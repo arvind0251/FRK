@@ -1,0 +1,66 @@
+import random  
+
+# Greetings / Hello-type Messages  
+greetings = [  
+    "Hello!", "Hi!", "Hey!", "Good morning!", "Good evening!",  
+    "Salaam!", "Namaste!", "Kya haal hain?", "Kaise ho?", "What's up?",  
+    "Yo bro!", "Bonjour!", "Hola!", "Kaisi chal rahi hai life?",  
+    "Aaj ka din kaisa ja raha hai?", "Sab thik?", "Long time no see!"  
+]  
+
+# 2000 Unique Normal Talks  
+normal_talk = [  
+    "Kaise ho bhai?", "Kya chal raha hai?", "Aaj mausam badhiya hai!",  
+    "Kuch naya seekh rahe ho?", "Zindagi mast chal rahi hai!",  
+    "Coding kar rahe ho kya?", "Khaana khaya?", "Aaj ka plan kya hai?",  
+    "Tu kabhi serious hota hai ya hamesha chill?",  
+    "Agar ek superpower mile toh kya chahiye?", "Music sun raha hai?",  
+    "Tujhe kis tarah ki movies pasand hain?", "Tu coffee person hai ya chai?",  
+    "Tu kitna busy rehta hai yaar!", "Kya tu kabhi bore hota hai?"  
+]  
+
+# Shayari  
+shayari = [  
+    "Tere bina zindagi adhuri si lagti hai...",  
+    "Waqt rukta nahi kisi ke liye, lekin yaadein hamesha rehti hain...",  
+    "Mohabbat ka asar hai jo har mod pe tum yaad aate ho...",  
+    "Chandni raaton mein teri yaad aati hai...",  
+    "Dil se nikli baat dil tak pahunch jati hai..."  
+]  
+
+# Roast Lines  
+roasts = [  
+    "Tera dimaag 2G speed se bhi slow hai!",  
+    "Tujhe dekh ke Windows XP bhi fast lagta hai!",  
+    "Tu itna lazy hai ki tere dreams bhi pending mein hain!",  
+    "Tere jokes sunke bots bhi error de dete hain!",  
+    "Tere doston ne tujhe block karne ka socha, par tu already offline tha!"  
+]  
+
+# Generate 2000 unique normal talks  
+for i in range(1900):  
+    normal_talk.append(f"Normal baat version {i+21}")  
+
+# Generate 5000 lines  
+lines = []  
+
+for _ in range(500):  # 500 Greetings  
+    lines.append(random.choice(greetings))  
+
+for _ in range(2000):  # 2000 Normal Talks  
+    lines.append(random.choice(normal_talk))  
+
+for _ in range(1250):  # 1250 Shayari  
+    lines.append(random.choice(shayari))  
+
+for _ in range(1250):  # 1250 Roast  
+    lines.append(random.choice(roasts))  
+
+# Shuffle to mix them  
+random.shuffle(lines)  
+
+# Save to file  
+with open("output.txt", "w", encoding="utf-8") as f:  
+    f.write("\n".join(lines))  
+
+print("5000 lines generated in 'output.txt'!")
