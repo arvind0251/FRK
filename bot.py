@@ -16,6 +16,7 @@ custom_replies = {
     "kaise ho": ["Main badhiya! Tum sunao? 😃", "Ek dum mast! Aur tum?", "Zinda hoon, tum kaise ho?", "Life mast chal rahi hai!"],
     "kya kar rahe ho": ["Bas tumse baat kar raha hoon! 🤖", "Coding chal rahi hai! 💻", "Masti kar raha hoon! 😂", "Kuch nahi, bas timepass!"],
     "rudra": ["Rudra se baat kar rahe ho? 😎", "Rudra kaise hain? 🤔", "Rudra ek dum OP banda hai! 🔥", "Rudra is the legend! 🏆"],
+    "Frk": ["Rudra se baat kar rahe ho? 😎", "Rudra kaise hain? 🤔", "Rudra ek dum OP banda hai! 🔥", "Rudra is the legend! 🏆"],
     "bye": ["Bye bye! 👋", "Phir milenge! 😊", "Take care! ❤️", "Goodbye, dost! 😢"],
     "masti": ["Masti toh full on chal rahi hai! 😆", "Masti time! 🕺", "Kabhi kabhi serious bhi ho jao! 😂"],
     "joke": ["Ek joke suno: Tera dimaag aur WiFi dono slow hai! 😂", "Ek aur joke? Tera face dekh ke bhi hansna aata hai! 😜"],
