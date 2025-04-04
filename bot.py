@@ -1,40 +1,28 @@
-import random  
-from aiogram import Bot, Dispatcher, types  
-from aiogram.types import Message  
-import asyncio  
+import random
+import asyncio
+from aiogram import Bot, Dispatcher, types
+from aiogram.types import Message
 
-TOKEN = "8075167051:AAG2UxaxCcQJeUkni6Z0iI5YkMawxTLvI0U"  
+# 🔥 Bot Token (BotFather se lo)
+TOKEN = "YOUR_BOT_TOKEN_HERE"
 
-bot = Bot(token=TOKEN)  
-dp = Dispatcher()  
+bot = Bot(token=TOKEN)
+dp = Dispatcher()
 
-# Load responses  
-with open("responses.txt", "r", encoding="utf-8") as f:  
-    responses = f.readlines()  
+# 🎯 Normal bot responses
+responses = [
+    "Hello! 😊", "Kaise ho? 😃", "Aaj ka din kaisa ja raha hai? 🔥",
+    "Kya chal raha hai?", "Masti kar rahe ho kya?", "Khaana khaya?",
+    "Aaj mausam kaise hai?", "Coding kar rahe ho?", "Kya plan hai aaj ka?"
+]
 
-# Load emojis  
-with open("emojis.txt", "r", encoding="utf-8") as f:  
-    emojis = f.read().split()  
+@dp.message()
+async def handle_message(message: Message):
+    reply = random.choice(responses)  # 🔥 Random reply dega
+    await message.reply(reply)
 
-# Load GIFs  
-with open("gifs.txt", "r", encoding="utf-8") as f:  
-    gifs = f.read().splitlines()  
+async def main():
+    await dp.start_polling(bot)
 
-@dp.message()  
-async def handle_message(message: Message):  
-    text_reply = random.choice(responses).strip()  
-    emoji_reply = random.choice(emojis)  
-    gif_reply = random.choice(gifs)  
-
-    # 70% chance text + emoji, 30% chance GIF  
-    if random.random() < 0.7:  
-        final_reply = f"{text_reply} {emoji_reply}"  
-        await message.reply(final_reply)  
-    else:  
-        await message.reply_animation(gif_reply)  # Sending GIF  
-
-async def main():  
-    await dp.start_polling(bot)  
-
-if __name__ == "__main__":  
-    asyncio.run(main())  
+if __name__ == "__main__":
+    asyncio.run(main())
