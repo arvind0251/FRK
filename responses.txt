@@ -1,5 +1,4 @@
 import random  
-
 # Greetings / Hello-type Messages  
 greetings = [  
     "Hello!", "Hi!", "Hey!", "Good morning!", "Good evening!",  
